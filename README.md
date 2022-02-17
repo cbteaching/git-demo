@@ -63,4 +63,9 @@ git add .
 git commit -m "change data"
 git push
 ```
+Let's say we don't want any of our changes since then
+```
+git log # here you can see all your previous commits
+q # to exit the log
+```
 
