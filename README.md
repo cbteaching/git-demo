@@ -44,7 +44,7 @@ git commit -m "added data files and an analysis file"
 ```
 cd src 
 nano analysis.R
-# change the column to the third column
+# change the column to the first column
 ```
 # now commit these new changes
 ```
@@ -58,7 +58,7 @@ Say something about how you can navigate back in the file structure and see the 
 ```
 cd data
 nano data.csv
-# change the first item just so there's something different 
+# change the first item just so there's something different to look at when col1 is printed 
 git add .
 git commit -m "change data"
 git push
