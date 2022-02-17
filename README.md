@@ -67,5 +67,22 @@ Let's say we don't want any of our changes since then
 ```
 git log # here you can see all your previous commits
 q # to exit the log
+git revert --no-commit 9b1ba3b6a289d047f5b024f956a7d3bcb2d0444d..HEAD # the commit number has to change 
+git commit -m "reverted because I didn't want the data or analysis to change like that"
 ```
-
+But what if we DO want to keep some of the changes we made since then? 
+```
+# make changes to data.csv and analysis.R again 
+git checkout -b old-state 10829683322b6e39fabad6c131603f55e0ad3693 # change the commit number 
+git status
+git branch 
+# make changes to the analysis.R script 
+git status
+git add .
+git commit -m "put analysis.R back to how I wanted it"
+git push --set-upstream origin out-state
+git checkout main
+git merge out-state
+# show how we did the thing can be proved now
+Rscript src/analysis.R
+```
