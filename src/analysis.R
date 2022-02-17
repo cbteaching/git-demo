@@ -1,2 +1,2 @@
 data = read.csv("~/github-demos/git-demo/data/data.csv")
-print(data$col1)
+print(data$col2)
